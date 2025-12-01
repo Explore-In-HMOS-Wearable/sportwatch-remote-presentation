@@ -1,0 +1,39 @@
+<div class="container">
+
+<!--Waiting for engine-->
+    <div if="{{ ! initialized }}" class="subcontainer">
+        <progress class="spinnerProgress" type="arc" percent="33"></progress>
+    </div>
+
+<!--Error Message-->
+    <div elif="{{ error !== null }}" class="subcontainer">
+        <text class="txt">{{ error }}</text>
+
+        <div class="imgDiv" style="margin-top: 16px;" @click="init">
+            <image src="/common/retry.png" class="img"></image>
+        </div>
+    </div>
+
+<!--Wait for Presentation-->
+    <div elif="{{ presentation === null }}" class="subcontainer">
+        <text class="txt">Open PresentationRemote on your phone and start presentation.</text>
+    </div>
+
+<!--Presentation Remote-->
+    <div else class="subcontainer">
+        <text class="txt">{{ presentation.current }} / {{ presentation.total }}</text>
+        <div class="remoteRow">
+            <div class="imgDiv" @click="sendMessage('pre')">
+                <image src="/common/chevron_left.png" class="img"></image>
+            </div>
+
+            <div class="imgDiv" @click="sendMessage('next')">
+                <image src="/common/chevron_right.png" class="img"></image>
+            </div>
+        </div>
+
+        <div class="imgDiv" style="background-color: red;" @click="sendMessage('close')">
+            <image src="/common/xmark.png" class="img"></image>
+        </div>
+    </div>
+</div>
