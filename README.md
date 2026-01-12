@@ -7,9 +7,9 @@ This app demonstrates how to control a presentation app using wear engine.
 # Preview
 
 <div>
-  <img src="screenshots/1.png" width="24%">
-  <img src="screenshots/2.png" width="24%">
-  <img src="screenshots/3.png" width="24%">
+  <img src="screenshots/1.png" width="25%">
+  <img src="screenshots/2.png" width="25%">
+  <img src="screenshots/3.png" width="25%">
 </div>
 
 # Use Cases
@@ -18,7 +18,7 @@ This app demonstrates how to control a presentation app using wear engine.
 - Go previous and next slides.
 - Close presentation.
 
-# TechStack
+# Tech Stack
 
 - **Languages**: HML, JS
 - **Frameworks**: 4.0.0(10)

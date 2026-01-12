@@ -47,7 +47,7 @@ export default {
                     that.error = 'PresentationRemote is not installed on the phone.';
                     that.initialized = true;
                 }
-            },
+            }
         });
     },
 
@@ -63,7 +63,7 @@ export default {
                 that.initialized = true;
             },
             onFailure: function (e) {
-                console.info('registerReceiver on fail' + e);
+                console.info(`registerReceiver on fail ${e}`);
             },
             onReceiveMessage: function (str) {
                 console.info(str);
@@ -82,7 +82,7 @@ export default {
                         console.info(`parse error, ${e}, ${JSON.stringify(e)}`);
                     }
                 }
-            },
+            }
         });
     },
 

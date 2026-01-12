@@ -6,8 +6,8 @@ export function keepScreenOn() {
         success: function () {
         },
         fail: function () {
-        },
-    })
+        }
+    });
     brightness.setValue({
         value: 180,
         success: function () {
